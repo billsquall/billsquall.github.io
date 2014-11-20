@@ -101,16 +101,16 @@
                 return;
             }
             var videoElement = document.getElementById('video');
-        
+			
             var canvasObj = document.getElementById('canvas');
         
             var context1 = canvasObj.getContext('2d');
         
             context1.fillStyle = "#ffffff";
         
-            context1.fillRect(0, 0, 240, 320);
+            context1.fillRect(0, 0, videoElement.width, videoElement.height);
         
-            context1.drawImage(videoElement, 0, 0, 240, 320);
+            context1.drawImage(videoElement, 0, 0, videoElement.width, videoElement.height);
         
             var imgData = canvas.toDataURL("image/png");
             var data = imgData.substr(22);
