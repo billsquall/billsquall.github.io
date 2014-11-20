@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=480, maximum-scale=1.0, user-scalable=no" />
+<head>
+    <title>Air Attack</title>
+    <link href="css/css.css" rel="stylesheet" type="text/css">
+    <meta name="GENERATOR" content="MSHTML 11.00.9431.0">
+</head>
+<body>
+    <div class="begin_div" id="begin_div" style="display: none;"></div>
+    <div id="game">
+        <canvas width="480" height="640" id="myCanvas" style="-moz-user-select: none; -webkit-user-select: none;"
+            unselectable="on">Your browser does not support the canvas element. </canvas>
+        <canvas width="144" height="30" id="myCanvas4" style="display: none; -moz-user-select: none; -webkit-user-select: none;"
+            unselectable="on">Your browser does not support the canvas element. </canvas>
+        <canvas width="140" height="80" id="myCanvas5" style="display: none; -moz-user-select: none; -webkit-user-select: none;"
+            unselectable="on">Your browser does not support the canvas element. </canvas>
+        <div class="selectBg" id="selectBg"></div>
+        <div class="selectDiv" id="selectDiv">
+            <ul class="selectPlane clx">
+                <li class="l1"></li>
+                <li class="l2"></li>
+                <li class="l3"></li>
+            </ul>
+            <div class="btn">START</div>
+        </div>
+        <div class="leftBg" id="leftBg"></div>
+        <div class="rightBg" id="rightBg"></div>
+        <div class="stageText" id="stageText"></div>
+        <div id="startDiv" style="display: none;">
+            <div class="btn startBtn" id="startBtn"><span class="bg">START</span></div>
+            <div class="btn helpBtn" id="helpBtn"><span class="bg">HELP</span></div>
+        </div>
+        <div id="overDiv" style="display: none;">
+            <h2>GAME OVER</h2>
+            <p class="p1"><span class="title">SCORE:</span><span id="score"></span></p>
+            <p class="p2"><span class="title">MAX-HIT:</span><span id="hit"></span></p>
+            <div class="btn Btn1" id="Btn1"><span class="bg">RESTART</span></div>
+            <div class="btn Btn2" id="Btn2"><span class="bg">MENU</span></div>
+        </div>
+        <div id="susDiv" style="display: none;">
+            <h2>MISSION COMPELET</h2>
+            <p class="p1"><span class="title">SCORE:</span><span id="SPAN1"></span></p>
+            <p class="p2"><span class="title">MAX-HIT:</span><span id="SPAN2"></span></p>
+            <div class="btn Btn1" id="DIV1"><span>NEXT STAGE</span></div>
+            <div class="btn Btn2" id="DIV2"><span>MENU</span></div>
+        </div>
+        <div class="warning" id="warning"
+            style="display: none;">
+            <strong>WARNING!!!</strong>
+        </div>
+        <div class="help_div" style="display: none;">
+            <span class="hus" id="hus1" style="left: 10px; top: 10px;"></span>
+            <span class="hus" id="hus2" style="left: 110px; top: 0px;"></span><span class="hus"
+                id="hus3" style="left: 60px; top: 30px;"></span><span class="hus" id="hus4"
+                    style="left: 110px; top: 90px;"></span>
+            <div class="hus_div" id="hus_div"></div>
+        </div>
+    </div>
+    <script src="js/game.js" type="text/javascript"></script>
+    <script src="js/plane.js" type="text/javascript"></script>
+    <script src="js/enemy.js" type="text/javascript"></script>
+    <script src="js/pd.js" type="text/javascript"></script>
+    <script src="js/bomb.js" type="text/javascript"></script>
+    <script src="js/explode.js" type="text/javascript"></script>
+    <script src="js/tool.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var selectDiv = $("selectDiv");
+        var selectBg = $("selectBg");
+        var begin_div = $("begin_div");
+        var leftBg = $("leftBg");
+        var rightBg = $("rightBg");
+        var score = $("myCanvas4");
+        var hit = $("myCanvas5");
+        var scoreSpan = $("score");
+        var hitSpan = $("hit");
+        var gameDiv = $("game");
+        var gameEnter = $("game");
+        var warning = $("warning");
+        var stageText = $("stageText");
+        var Attack = new game($("myCanvas"));
+        Attack.init();
+        Attack.loading();
+</script>
+</body>
+</html>
