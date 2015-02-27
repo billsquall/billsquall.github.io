@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+  <script type="text/javascript">
+  $(function(){
+	  $("#File1").on("change",function(){
+		var file=this.files[0];
+		if(this.files&&file)
+		{
+			var reader=new FileReader();
+			reader.onload=function(e){
+				$("#img1").attr("src",e.target.result);
+				$("#fn").text(file.name);
+				$("#fs").text(file.size+" bytes");
+			}
+			reader.readAsDataURL(file);
+		}
+	  });
+  });
+  </script>
+ </head>
+
+ <body>
+  <div>
+	<input id="File1" type="file" />
+	<br/>
+	<img id="img1" src="" alt="" />
+	<br/>
+	<span id="fn" ></span>
+	<br/>
+	<span id="fs" ></span>
+  </div>
+ </body>
+</html>
