@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    
+<script src="lib/qr.min.js"></script>
+    
+<script>
+function trans()
+{
+qr.canvas({
+                
+size:10,
+                
+level:'L',
+                
+value:document.getElementById("context").value,
+                
+canvas:document.getElementById('image')
+            });
+}
+
+</script>
+</head>
+
+<body>
+
+<input id="context" />
+<input id="btn" type="button" value="转换" onclick="trans()"/>
+<canvas id="image"></canvas>
+<div>
+    <img src="">
+</div>
+
+</body>
+
+</html>
