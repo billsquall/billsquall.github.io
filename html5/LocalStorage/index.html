@@ -2,6 +2,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="localstorage.js"></script>
     <script type="text/javascript">
         function preImg(sourceId, targetId) {
             if (typeof FileReader === 'undefined') {
@@ -18,25 +19,10 @@
         }
 
         $().ready(function () {
-            if (window.localStorage) {
-                var storage = window.localStorage;
-                if (storage.avatar == undefined) {
-                    $.get("avatar.txt", function (result) {
-                        $("#avatar").attr('src', result);
-                        storage.avatar = result;
-                    });
-                } else {
-                    $("#avatar").attr('src', storage.avatar);
-                }
-            } else {
-                alert('This browser does NOT support localStorage');
-
-            }
+            AjaxLocalStorage("avatar.txt");
         });
 
         function SureChange() {
-            //upload pic
-            //………………没做上传，服务器不支持啦
             if (typeof FileReader === 'undefined') {
                 alert('Your browser does not support FileReader...');
                 return;
@@ -68,14 +54,14 @@
     </script>
 </head>
 <body>
-<p>首次访问ajax返回头像，2次访问使用本地头像缓存，更新上传后台并更新本地缓存</p>
-你的头像<img id="avatar"/>
-<br/>
+你的头像<img id="avatar" class="localStorage" localKey="avatar" localAttr="src" />
+    <br/>
 上传你的新头像<input id="uploader" type="file" onchange=" preImg(this.id, 'imgPre'); "/>
 <br/>
 上传结果预览<img id="imgPre"/>
-<br/>
-<input id="sureChange" type="button" value="确定替换" onclick=" SureChange() "/>
+    <br/>
+    <input id="sureChange" type="button" value="确定替换" onclick="SureChange()" />
 <input id="cleanLocal" type="button" value="清除本地头像" onclick=" CleanAvatar() "/>
+<input id="demo" class="localStorage" localKey="avatar" localAttr="value" />
 </body>
 </html>
