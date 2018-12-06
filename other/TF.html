@@ -1,0 +1,67 @@
+<html>
+<body>
+    <div>
+        <input id='txt' />
+        <input id='btn' type="button" value="生成名片"/>
+        <!-- <img src="tf.png" /> -->
+    </div>
+    <div id='showPic'></div>
+</body>
+<style>
+</style>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<script>
+    var xStep=58;
+    var xFix=10;
+    var yStep=130;
+    var yFix=20;
+    $(function(){ 
+        $('#btn').click(function(){
+            var strs=$('#txt').val().split("");
+            for(var s in strs)
+            {
+                var y1 =10;//开始
+                var x2 =60;//结束
+                var y2 =125;//结束
+                var x1 =14;//开始
+                var pos="";
+                switch(strs[s].toLowerCase())
+                {
+                    case 'a':{pos=(y1+yFix)+"px "+(x2+xFix)+"px "+(y2+yFix)+"px "+(x1+xFix)+"px";console.log(pos);break;}
+                    case 'b':{pos=(y1+yFix)+"px "+(x2+xStep+xFix)+"px "+(y2+yFix)+"px "+(x1+xStep+xFix)+"px";console.log(pos);break;}
+                    case 'c':{pos=(y1+yFix)+"px "+(x2+xStep*2+xFix)+"px "+(y2+yFix)+"px "+(x1+xStep*2+xFix)+"px";console.log(pos);break;}
+                    case 'd':{pos=(y1+yFix)+"px "+(x2+xStep*3+xFix)+"px "+(y2+yFix)+"px "+(x1+xStep*3+xFix)+"px";console.log(pos);break;}
+                    case 'e':{pos=(y1+yFix)+"px "+(x2+xStep*4+xFix)+"px "+(y2+yFix)+"px "+(x1+xStep*4+xFix)+"px";console.log(pos);break;}
+                    case 'f':{pos=(y1+yFix)+"px "+(x2+xStep*5+xFix)+"px "+(y2+yFix)+"px "+(x1+xStep*5+xFix)+"px";console.log(pos);break;}
+                    case 'g':{pos=(y1+yFix)+"px "+(x2+xStep*6+xFix)+"px "+(y2+yFix)+"px "+(x1+xStep*6+xFix)+"px";console.log(pos);break;}
+                    case 'h':{pos=(y1+yFix)+"px "+(x2+xStep*7+xFix)+"px "+(y2+yFix)+"px "+(x1+xStep*7+xFix)+"px";console.log(pos);break;}
+                    case 'i':{pos=(y1+yFix)+"px "+(x2+xStep*8+xFix)+"px "+(y2+yFix)+"px "+(x1+xStep*8+xFix)+"px";console.log(pos);break;}
+
+                    case 'j':{pos=(y1+yStep+yFix)+"px "+(x2+xFix)+"px "+(y2+yStep+yFix)+"px "+(x1+xFix)+"px";console.log(pos);break;}
+                    case 'k':{pos=(y1+yStep+yFix)+"px "+(x2+xStep+xFix)+"px "+(y2+yStep+yFix)+"px "+(x1+xStep+xFix)+"px";console.log(pos);break;}
+                    case 'l':{pos=(y1+yStep+yFix)+"px "+(x2+xStep*2+xFix)+"px "+(y2+yStep+yFix)+"px "+(x1+xStep*2+xFix)+"px";console.log(pos);break;}
+                    case 'm':{pos=(y1+yStep+yFix)+"px "+(x2+xStep*3+xFix)+"px "+(y2+yStep+yFix)+"px "+(x1+xStep*3+xFix)+"px";console.log(pos);break;}
+                    case 'n':{pos=(y1+yStep+yFix)+"px "+(x2+xStep*4+xFix)+"px "+(y2+yStep+yFix)+"px "+(x1+xStep*4+xFix)+"px";console.log(pos);break;}
+                    case 'o':{pos=(y1+yStep+yFix)+"px "+(x2+xStep*5+xFix)+"px "+(y2+yStep+yFix)+"px "+(x1+xStep*5+xFix)+"px";console.log(pos);break;}
+                    case 'p':{pos=(y1+yStep+yFix)+"px "+(x2+xStep*6+xFix)+"px "+(y2+yStep+yFix)+"px "+(x1+xStep*6+xFix)+"px";console.log(pos);break;}
+                    case 'q':{pos=(y1+yStep+yFix)+"px "+(x2+xStep*7+xFix)+"px "+(y2+yStep+yFix)+"px "+(x1+xStep*7+xFix)+"px";console.log(pos);break;}
+                    case 'r':{pos=(y1+yStep+yFix)+"px "+(x2+xStep*8+xFix)+"px "+(y2+yStep+yFix)+"px "+(x1+xStep*8+xFix)+"px";console.log(pos);break;}
+
+                    case 's':{pos=(y1+yStep*2+yFix)+"px "+(x2+xFix)+"px "+(y2+yStep*2+yFix)+"px "+(x1+xFix)+"px";console.log(pos);break;}
+                    case 't':{pos=(y1+yStep*2+yFix)+"px "+(x2+xStep+xFix)+"px "+(y2+yStep*2+yFix)+"px "+(x1+xStep+xFix)+"px";console.log(pos);break;}
+                    case 'u':{pos=(y1+yStep*2+yFix)+"px "+(x2+xStep*2+xFix)+"px "+(y2+yStep*2+yFix)+"px "+(x1+xStep*2+xFix)+"px";console.log(pos);break;}
+                    case 'v':{pos=(y1+yStep*2+yFix)+"px "+(x2+xStep*3+xFix)+"px "+(y2+yStep*2+yFix)+"px "+(x1+xStep*3+xFix)+"px";console.log(pos);break;}
+                    case 'w':{pos=(y1+yStep*2+yFix)+"px "+(x2+xStep*4+xFix)+"px "+(y2+yStep*2+yFix)+"px "+(x1+xStep*4+xFix)+"px";console.log(pos);break;}
+                    case 'x':{pos=(y1+yStep*2+yFix)+"px "+(x2+xStep*5+xFix)+"px "+(y2+yStep*2+yFix)+"px "+(x1+xStep*5+xFix)+"px";console.log(pos);break;}
+                    case 'y':{pos=(y1+yStep*2+yFix)+"px "+(x2+xStep*6+xFix)+"px "+(y2+yStep*2+yFix)+"px "+(x1+xStep*6+xFix)+"px";console.log(pos);break;}
+                    case 'z':{pos=(y1+yStep*2+yFix)+"px "+(x2+xStep*7+xFix)+"px "+(y2+yStep*2+yFix)+"px "+(x1+xStep*7+xFix)+"px";console.log(pos);break;}
+                }
+                $('#showPic').append(strs[s]+"<img src='tf.png' style='position:absolute;clip:rect("+pos+"); ' />");
+            }
+            
+        });
+        
+});
+
+</script>
+</html>
