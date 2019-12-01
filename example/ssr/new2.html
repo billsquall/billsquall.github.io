@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>冉星专栏</title>
+    <link rel="stylesheet" href="./site.css">
+</head>
+</head>
+<body class="signup">
+    <div class="container">
+        <div class="banner">
+            <img src="./img/5.jpg" alt="">
+        </div>
+        <div class="content">
+            <ul class="nomargin">
+                <li><a href="#">项目介绍</a></li>
+                <li class="active"><a href="#">报名规则</a></li>
+                <li><a href="#">活动报道</a></li>
+            </ul> 
+        </div>
+
+        <div class="list meetinglist ">
+            <!-- <p>活动时间:2020年*月*日 - 2020年*月*日</p>
+            <p>活动报名时间:2020年*月*日 - 2020年*月*日</p> -->
+            <img src="./img/step1.png" alt="">
+            <img src="./img/step2.png" alt="">
+            <div class="extra">
+                    <img src="./img/step3.png" alt="">
+                    <a class="words" href="http://zwx-m.edrwechat.cn/s/779961f60515f7f3?ru=/enroll"></a>
+            </div>
+            <img src="./img/step4.png" alt="">
+        </div>
+    </div>
+
+    <script type="text/javascript">
+         window.onload = function(){
+             var more = document.querySelector(".more");
+             var cases = document.querySelector(".cases");
+             more.addEventListener("click",function(){
+                  this.classList.toggle("up");
+                  cases.classList.toggle("fullcase");
+             });
+         }
+    </script>
+</body>
+</html>

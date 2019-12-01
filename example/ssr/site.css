@@ -335,7 +335,12 @@
   /**
    * Add the correct display in IE 10+.
    */
-  
+   a {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-user-select: none;
+    -moz-user-focus: none;
+      -moz-user-select: none;
+  }
   template {
     display: none;
   }
@@ -370,6 +375,9 @@
       max-width: 640px;
       margin:0 auto;
   }
+  .banner{
+    line-height: 0;
+  }
   .banner img{
       width:100%;
   }
@@ -377,7 +385,7 @@
       display:flex;
       list-style: none;
       margin-bottom:20px;
-      
+      background-color:#fff;
   }
   .content ul li{
       width:33%;
@@ -406,6 +414,10 @@
       color:#bb2f32;
       border-bottom:1px solid #bb2f32;
   }
+
+  .content ul li a:hover,.content ul li.active a{
+    color:#bb2f32;
+}
 
   .list .detail{
       padding:20px 10px 20px 15px;
@@ -513,4 +525,102 @@
     margin-bottom:10px;
     padding-bottom: 15px;
     border-bottom:  1px solid #ebeaea;      
+  }
+  .search{
+    padding: 10px 0;
+    background-color: #fff;
+    font-size: 14px;
+    color: #999;
+    display: flex;
+    justify-content: center;
+  }
+  .search input{
+    height: 23px;
+    background-color: #f7f7f7;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    width: 80%;
+  }
+  .search img{
+    width:40px;
+    height: 25px;
+  }
+
+  .cases{
+    display: flex;
+    background-color: #e8e8e8;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    padding: 8px 20px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+  }
+  .fullcase{
+    height: auto;
+  }
+  .cases .more{
+    transform: rotate(90deg);
+    position: absolute;
+    right: 11px;
+    top: 9px;
+    font-size: 18px;
+    font-family: '宋体';
+    font-weight: bold;
+  } 
+  .cases .up{
+    transform: rotate(-90deg);
+  }
+  .cases .item{
+    width: 40%;
+    padding: 8px 10px;
+    border: 1px solid #b3b3b3;
+    border-radius: 8px;
+    margin: 4px 0;
+  }
+  .cases .item.active{
+    width:40%;
+    color:#bb2f32;
+    border:1px solid #bb2f32;
+    border-radius: 5px;
+  }
+  .withsearch ul{
+    margin-bottom:0;
+  }
+
+  .withsearch .tags .time{
+    border:none;
+  }
+ 
+  .content .nomargin{
+    margin:0;
+  }
+  .signup{
+    background-color:#fff;
+  }
+  .signup p{
+    color:#959393;
+    font-size:14px;
+    line-height: 1.5;
+  }
+  .signup .meetinglist img{
+    width:100%;
+    margin-bottom:20px;
+  }
+  .extra{
+    position: relative;
+  }
+  .extra .words{
+    position: absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+  }
+  @media screen and (max-width: 420px) {
+    li a{
+      font-size: 14px;
+    }
   }
