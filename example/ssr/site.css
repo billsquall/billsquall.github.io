@@ -410,9 +410,10 @@
   .list .detail{
       padding:20px 10px 20px 15px;
       display:flex;
-      font-size:16px;
+      font-size:14px;
       margin-bottom:20px;
       border-bottom:1px solid #EAEAEA;
+      border-top:1px solid #EAEAEA;
       background-color:white;
       flex:1 0 auto;
   }
@@ -428,6 +429,9 @@
   }
   .list .tags{
      font-size:14px;
+  }
+  .des{
+    width:100%;
   }
   .des p{
      margin-bottom:20px;
@@ -483,6 +487,7 @@
   }
   .meetingsection img{
       width:100%;
+      border-radius: 8px;
   }
   .meetingdone .meetingsection{
       width:45%;
@@ -495,4 +500,17 @@
       color:#606060;
       padding:8px 5px;
       font-size: 14px;
+  }
+
+  .meetingpadding{
+     width:95%;
+     margin:0 auto;
+  }
+  .bold{
+    font-weight: bold;
+  }
+  .meetingpadding .title{
+    margin-bottom:10px;
+    padding-bottom: 15px;
+    border-bottom:  1px solid #ebeaea;      
   }
